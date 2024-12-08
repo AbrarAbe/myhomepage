@@ -7,47 +7,41 @@
     <title>AI Dashboard</title>
     <link rel="icon" href="../assets/images/ai.png">
     <link rel="stylesheet" href="../assets/css/pages.css">
+    <link rel="stylesheet" href="../assets/css/loader.css">
     <link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="../assets/js/index.js"></script>
+    <script defer src="../assets/js/loader.js"></script>
 </head>
-<style>
-    @font-face {
-        font-family: primous;
-        src: url(../assets/fonts/primous.otf);
-    }
 
-    @font-face {
-        font-family: cascadiacove;
-        src: url(../assets/fonts/cascadiacove.otf);
-    }
-
-    @font-face {
-        font-family: jetbrainsmono;
-        src: url(../assets/fonts/jetbrainsmono.ttf);
-    }
-</style>
-
-<body style="background-image: linear-gradient(to bottom right, #f5f5f5, #75a2d6, #e0e68f);">
-    <div class="grid grid-flow-row auto-rows-max">
+<body>
+    <section id="preloaderLink" class="preloader flex">
+        <article class="loader"></article>
+    </section>
+    <div class="grid grid-flow-row auto-rows-max gap-2">
         <div class="pt-10 mb-5">
             <ul>
-                <li class="pl-1"><a href="../index.html"><i class="nf nf-fa-codepen" aria-hidden="true"></i></a>
+                <li class="pl-1"><a href="../index.html" class="preload-link"><i class="nf nf-fa-codepen"
+                            aria-hidden="true"></i></a>
                 </li>
                 <li class="active"><a href="#" class="active-text"><i class="nf nf-fa-coffee"
                             aria-hidden="true"></i></a>
                 </li>
                 <li><a href="ui_ux.html"><i class="nf nf-fa-rocket" aria-hidden="true"></i></a>
                 </li>
-                <li class="pr-1"><a href="#"><i class="nf nf-fa-circle_user" aria-hidden="true"></i></a></li>
+                <li class="pr-1"><a href="https://github.com/AbrarAbe" class="preload-link"><i
+                            class="nf nf-fa-circle_user" aria-hidden="true"></i></a></li>
             </ul>
         </div>
-        <div class="container mx-auto mb-5 p-5">
-            <h1 class="text-5xl mb-10 text-center tracking-wide" style="font-family: primous;">AI Dashboard</h1>
+        <div class="container mx-auto mb-5 py-5 px-10">
+            <div class="mb-5 tracking-wide" style="font-family: primous;">
+                <h1 class="text-5xl text-center mb-10">AI Dashboard</h1>
+                <h1 class="text-3xl"><i class="nf nf-md-robot_outline"> Chatbots</i></h1>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 tracking-wide"
                 style="font-family: cascadiacove;">
                 <a href="https://chat.openai.com/"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg" alt="ChatGPT"
                         class="mb-4 w-12">
                     <div class="justify-center">
@@ -59,7 +53,7 @@
                     </div>
                 </a>
                 <a href="https://gemini.google.com/app"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
                         alt="Google AI" class="mb-4 w-24">
                     <div class="justify-center">
@@ -72,7 +66,7 @@
                     </div>
                 </a>
                 <a href="https://claude.ai/"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg" alt="Claude AI"
                         class="mb-4 w-28">
                     <div class="justify-center">
@@ -84,7 +78,7 @@
                     </div>
                 </a>
                 <a href="https://chat.mistral.ai/chat"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/en/1/1f/LowRes_80dpi_Mistral_AI_Logo.png"
                         alt="Mistral AI" class="mb-4 w-28">
                     <div class="justify-center">
@@ -95,7 +89,7 @@
                     </div>
                 </a>
                 <a href="https://www.perplexity.ai/"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg"
                         alt="Perplexity AI" class="mb-5 w-36">
                     <div class="justify-center">
@@ -107,7 +101,7 @@
                     </div>
                 </a>
                 <a href="https://www.blackbox.ai/"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://img.icons8.com/ios/500/blackbox.png" alt="Microsoft AI" class="mb-1 w-12">
                     <div class="justify-center">
                         <h2 class="text-xl font-medium mb-2">BlackBox Ai</h2>
@@ -118,7 +112,7 @@
                     </div>
                 </a>
                 <a href="https://huggingface.co/chat/"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hf-logo-with-title.svg/1280px-Hf-logo-with-title.svg.png"
                         alt="HuggingChat" class="mb-4 w-40">
                     <div class="justify-center">
@@ -129,7 +123,7 @@
                     </div>
                 </a>
                 <a href="https://copilot.microsoft.com/"
-                    class="justify- bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="justify- bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Microsoft_copilot_with_wordmark_logo.png"
                         alt="Microsoft AI" class="mb-4 w-28 h-max">
                     <div class="justify-center">
@@ -141,8 +135,8 @@
                     </div>
                 </a>
                 <a href="https://glhf.chat/chat/"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
-                    <h1 class="text-xl font-bold" style="font-family: jetbrainsmono">glfs.chat</h1>
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    <h1 class="text-2xl font-bold" style="font-family: jetbrainsmono">glfs.chat</h1>
                     <div class="justify-center">
                         <h2 class="text-xl font-medium mb-2">glfs.chat</h2>
                         <p class="text-gray-600 break-normal text-pretty md:text-ellipsis">We use vLLM and a
@@ -152,39 +146,48 @@
                             use our chat UI, or our OpenAI-compatible API.</p>
                     </div>
                 </a>
+            </div>
+            <h1 class="text-3xl mt-10 mb-5 tracking-wide" style="font-family: primous;"><i class=" nf nf-cod-tools">
+                    Other Tools</i>
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 tracking-wide"
+                style="font-family: cascadiacove;">
                 <a href="https://app.presentations.ai/#/ideatodeck"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://cdn.prod.website-files.com/63ca9a05fdc83042565f605c/63e380b25750982953578ec7_P_AI_54.svg"
                         alt="Presentations.ai" class="mb-4 w-48">
                     <div class="justify-center">
                         <h2 class="text-xl font-medium mb-2">Presentations.ai</h2>
                         <p class="text-gray-600 break-normal text-pretty md:text-ellipsis">Presentations.ai is an
                             AI-powered
-                            platform designed for streamlined creation of professional presentations. It incorporates
+                            platform designed for streamlined creation of professional presentations. It
+                            incorporates
                             real-time collaboration features for efficient teamwork.</p>
                     </div>
                 </a>
                 <a href="https://app.tealhq.com/home"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://cdn.prod.website-files.com/62775a91cc3db44c787149de/62775d8abf9f57629c567a0a_Group%201148.svg"
                         alt="Teal" class="mb-4 w-24">
                     <div class="justify-center">
                         <h2 class="text-xl font-medium mb-2">Teal</h2>
-                        <p class="text-gray-600 break-normal text-pretty md:text-ellipsis">Teal is an AI-powered resume
+                        <p class="text-gray-600 break-normal text-pretty md:text-ellipsis">Teal is an AI-powered
+                            resume
                             builder that assists in refining and optimizing resumes to maximize their impact on
                             potential
                             employers. It leverages AI to enhance presentation and keywords.</p>
                     </div>
                 </a>
                 <a href="https://editor.sudowrite.com/app"
-                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
+                    class="bg-white/50 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 transition duration-300 border-4 border-white md:aspect-square flex flex-col justify-evenly">
                     <img src="https://res.cloudinary.com/helpkit/image/upload/v1721662250/write_logo_dark_b7a5cc707e.png"
                         alt="Sudowrite" class="mb-4 w-28">
                     <div class="justify-center">
                         <h2 class="text-xl font-medium mb-2">Sudowrite</h2>
                         <p class="text-gray-600 break-normal text-pretty md:text-ellipsis">Sudowrite is a creative
                             writing
-                            assistant, especially beneficial for fiction writers. It helps overcome writer's block and
+                            assistant, especially beneficial for fiction writers. It helps overcome writer's block
+                            and
                             generates new ideas, enhancing the creative process.</p>
                     </div>
                 </a>
