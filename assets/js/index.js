@@ -1,13 +1,14 @@
-const lis = document.querySelectorAll("li");
-const a = document.querySelectorAll("li a");
+const ul = document.querySelector("ul");
+const lis = ul.querySelectorAll("li");
+const as = ul.querySelectorAll("a");
 
-for (let i = 0; i < lis.length; i++) {
-    lis[i].addEventListener("click", function () {
-        for (let i = 0; i < lis.length; i++) {
-            lis[i].classList.remove("active");
-            a[i].classList.remove("active-text");
-        }
-        this.classList.add("active");
-        a[i].classList.add("active-text");
-    });
-}
+ul.addEventListener("click", function(event) {
+  const target = event.target.closest("li");
+  if (!target) return;
+
+  lis.forEach(li => li.classList.remove("active"));
+  as.forEach(a => a.classList.remove("active-text"));
+
+  target.classList.add("active");
+  target.querySelector("a").classList.add("active-text");
+});
