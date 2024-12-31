@@ -15,6 +15,10 @@ body {
     src: url(../fonts/jetbrainsmono.ttf);
 }
 
+.hidden {
+    display: none;
+}
+
 ul {
   list-style: none;
   width: inherit;
@@ -43,8 +47,10 @@ ul li:last-of-type {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
 }
-ul li:hover {
+ul li a:hover {
   cursor: pointer;
+  color: crimson;
+  text-shadow: 0 0 15px rgba(220, 10, 10, 0.5);
 }
 ul li a {
   display: inline-block;

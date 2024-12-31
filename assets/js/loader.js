@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.preload-link');
     const preloaderLink = document.getElementById('preloaderLink');
+    const content = document.getElementById('content');
 
     const showPreloader = (element) => {
         element.classList.add('show-preloader');
@@ -9,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     };
 
+    content.classList.remove('hidden');
+    
     links.forEach(link => {
         link.addEventListener('click', (event) => {
             showPreloader(preloaderLink);
