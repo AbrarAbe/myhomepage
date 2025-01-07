@@ -47,9 +47,9 @@ This homepage is organized into sections accessible through the navigation menu.
     *   Links to Other Platforms
 
 <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-    <img src="https://github.com/user-attachments/assets/f0da00dd-4dfc-457c-a079-0123602176c4" alt="Screenshot 2025-01-06 at 22-41-00 AI Dashboard" style="max-height: 300px; margin: 5px;">
-    <img src="https://github.com/user-attachments/assets/d21a75e8-a652-4617-aeb3-62b1655cbc7f" alt="Screenshot 2025-01-06 at 22-41-09 UI_UX Resources" style="max-height: 300px; margin: 5px;">
-    <img src="https://github.com/user-attachments/assets/74ffbf4b-91fe-453d-b917-b97fa51c5241" alt="Screenshot 2025-01-06 at 22-41-22 Developer Resources" style="max-height: 300px; margin: 5px;">
+    <img src="https://github.com/user-attachments/assets/f0da00dd-4dfc-457c-a079-0123602176c4" alt="Screenshot 2025-01-06 at 22-41-00 AI Dashboard" style="width: 30%; margin: 5px;">
+    <img src="https://github.com/user-attachments/assets/d21a75e8-a652-4617-aeb3-62b1655cbc7f" alt="Screenshot 2025-01-06 at 22-41-09 UI_UX Resources" style="width: 30%; margin: 5px;">
+    <img src="https://github.com/user-attachments/assets/74ffbf4b-91fe-453d-b917-b97fa51c5241" alt="Screenshot 2025-01-06 at 22-41-22 Developer Resources" style="width: 30%; margin: 5px;">
 </div>
 
 ### Prerequisites
