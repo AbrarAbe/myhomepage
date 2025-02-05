@@ -92,6 +92,9 @@ While this project is simple, contributions are welcome! To contribute:
 3.  Make your changes.
 4.  Submit a pull request.
 
+## Github Stats
+![Alt](https://repobeats.axiom.co/api/embed/ae961c38fae569e289672bbdb2ac9a4e6d43ff30.svg "Repobeats analytics image")
+
 ## License
 
 This project is open-source and is distributed under the [MIT License](LICENSE). See the `LICENSE` file for details.
@@ -100,5 +103,3 @@ This project is open-source and is distributed under the [MIT License](LICENSE).
 
 *   [AbrarAbe](<https://github.com/AbrarAbe>)
 *   <abrar.abe01@gmail.com>
-
----
