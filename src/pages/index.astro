@@ -1,0 +1,125 @@
+---
+import "../styles/global.css";
+import "../styles/menu.css";
+
+import LocalScripts from "../components/LocalScripts.astro";
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>My Homepage</title>
+		<link rel="icon" href="/public/images/profil.png" />
+		<link
+			rel="stylesheet"
+			href="https://www.nerdfonts.com/assets/css/webfont.css"
+		/>
+		<meta name="generator" content={Astro.generator} />
+	</head>
+
+	<body class="h-svh flex flex-col justify-center items-center">
+		<section id="preloaderLink" class="preloader flex">
+			<article class="loader"></article>
+		</section>
+		<main id="content" class="hidden">
+			<header class="container mx-auto">
+				<div class="keyboard" style="font-family: reliva">
+					<span class="key">M</span>
+					<span class="key">Y</span><span class="key">_</span>
+					<span class="key">H</span>
+					<span class="key">O</span>
+					<span class="key">M</span>
+					<span class="key">E</span>
+					<span class="key">P</span>
+					<span class="key">A</span>
+					<span class="key">G</span>
+					<span class="key">E</span>
+				</div>
+				<div class="text-center">
+					<p class="text-md xl:text-xl sm:text-sm">
+						✨ Browse awesome websites in one place
+					</p>
+				</div>
+			</header>
+
+			<nav class="my-10 px-5" id="navigation-menu">
+				<ul>
+					<li class="active pl-">
+						<a
+							href="/"
+							class="active-text block"
+							aria-label="index"
+						>
+							<i class="nf nf-fa-codepen"></i>
+						</a>
+					</li>
+					<li>
+						<a href="/ai" class="preload-link" aria-label="ai">
+							<i class="nf nf-fa-coffee"></i>
+						</a>
+					</li>
+					<li>
+						<a href="/ui_ux" class="preload-link" aria-label="uiux">
+							<i class="nf nf-fa-rocket"></i>
+						</a>
+					</li>
+					<li>
+						<a href="/dev" class="preload-link" aria-label="dev">
+							<i class="nf nf-dev-terminal"></i>
+						</a>
+					</li>
+					<li class="pr-1">
+						<a
+							href="https://github.com/AbrarAbe/mydashboard"
+							class="preload-link"
+							aria-label="source"
+						>
+							<i class="nf nf-dev-github"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="descriptions mb-10">
+				<ul
+					class="list-none p-0 m-0 flex flex-col sm:flex-row items-center justify-center sm:space-x-4"
+				>
+					<li class="mb-5 sm:mb-0 flex items-center">
+						<i class="nf nf-fa-codepen mr-2"></i>
+						<p class="text-md xl:text-xl sm:text-sm">
+							Welcome page
+						</p>
+					</li>
+					<li class="mb-5 sm:mb-0 flex items-center">
+						<i class="nf nf-fa-coffee mr-2"></i>
+						<p class="text-md xl:text-xl sm:text-sm">AI Tools</p>
+					</li>
+					<li class="mb-5 sm:mb-0 flex items-center">
+						<i class="nf nf-fa-rocket mr-2"></i>
+						<p class="text-md xl:text-xl sm:text-sm">
+							UI/UX Inspiration
+						</p>
+					</li>
+					<li class="mb-5 sm:mb-0 flex items-center">
+						<i class="nf nf-dev-terminal mr-2"></i>
+						<p class="text-md xl:text-xl sm:text-sm">
+							Dev Resources
+						</p>
+					</li>
+					<li class="mb-5 sm:mb-0 flex items-center">
+						<i class="nf nf-dev-github mr-2"></i>
+						<p class="text-md xl:text-xl sm:text-sm">Github Repo</p>
+					</li>
+				</ul>
+			</section>
+			<footer class="created-by">
+				<p>Created by</p>
+				<a href="https://github.com/AbrarAbe/" target="_blank"
+					>Abrar Abe</a
+				>
+			</footer>
+		</main>
+		<LocalScripts />
+	</body>
+</html>
