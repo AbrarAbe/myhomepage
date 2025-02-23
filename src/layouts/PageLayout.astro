@@ -2,17 +2,17 @@
 import "../styles/global.css";
 import "../styles/pages.css";
 
-import Head from "../components/Metadata.astro";
+import Metadata from "../components/Metadata.astro";
 import Loader from "../components/Loader.astro";
 import Navigation from "../components/Navigation.astro";
-import LocalScripts from "../components/LocalScripts.astro";
 import Footer from "../components/Footer.astro";
+import LocalScripts from "../components/LocalScripts.astro";
 
-const { pageTitle, pageIcon } = Astro.props;
+const { title, siteIcon } = Astro.props;
 ---
 
 <html lang="en">
-	<Head pagetitle={pageTitle} , pageIcon={pageIcon} />
+	<Metadata title={title} , siteIcon={siteIcon} />
 	<body class="py-10">
 		<Loader />
 		<main class="grid grid-flow-row auto-rows-max gap-2 mb-5" id="content">

@@ -2,18 +2,18 @@
 import "../styles/global.css";
 import "../styles/menu.css";
 
-import Head from "../components/Metadata.astro";
+import Metadata from "../components/Metadata.astro";
 import Loader from "../components/Loader.astro";
 import TextAnimation from "../components/TextAnimation.astro";
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import LocalScripts from "../components/LocalScripts.astro";
 
-const { pageTitle, pageIcon } = Astro.props;
+const { title, siteIcon } = Astro.props;
 ---
 
 <html lang="en">
-	<Head pagetitle={pageTitle} , pageIcon={pageIcon} />
+	<Metadata title={title} , siteIcon={siteIcon} />
 	<body class="h-svh flex flex-col justify-center items-center">
 		<Loader />
 		<main id="content">
