@@ -1,26 +1,22 @@
 ---
 import "../styles/global.css";
-import "../styles/menu.css";
+import "../styles/pages.css";
 
 import Head from "../components/Metadata.astro";
 import Loader from "../components/Loader.astro";
-import TextAnimation from "../components/TextAnimation.astro";
 import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
 import LocalScripts from "../components/LocalScripts.astro";
+import Footer from "../components/Footer.astro";
 
 const { pageTitle, pageIcon } = Astro.props;
 ---
 
 <html lang="en">
 	<Head pagetitle={pageTitle} , pageIcon={pageIcon} />
-	<body class="h-svh flex flex-col justify-center items-center">
+	<body class="py-10">
 		<Loader />
-		<main id="content">
-			<header class="container mx-auto">
-				<TextAnimation />
-			</header>
-			<nav class="my-10 px-5" id="navigation-menu">
+		<main class="grid grid-flow-row auto-rows-max gap-2 mb-5" id="content">
+			<nav class="mb-5" id="navigation-menu">
 				<Navigation />
 			</nav>
 			<slot />
