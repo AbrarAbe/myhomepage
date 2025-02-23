@@ -16,7 +16,6 @@ Welcome to my personal homepage! This interactive dashboard, built with Astro JS
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
 - [Features](#features)
-- [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -93,11 +92,6 @@ To view the deployed application, visit [https://abrarabe.github.io/myhomepage](
 *   **Interactive Navigation:** The navigation menu highlights the currently selected item when clicked.
 *   **Simple and Clean:** The design prioritizes simplicity and clear functionality.
 *   **Built with Astro JS:** Enjoy the benefits of modern web development with Astro JS, including improved performance, SEO optimization, and a component-based architecture.
-
-## Usage
-
-1.  Open the `index.html` file (or similar) in your web browser.
-2.  Click on the different list items in the navigation menu to see the active item change.
 
 ## Contributing
 
