@@ -4,7 +4,7 @@ A personal homepage with an interactive navigation menu, All in one homepage for
 ![Screenshot 2025-01-06 at 22-40-27 My Homepage](https://github.com/user-attachments/assets/5f222f10-454f-4dc6-9504-014a92291469)
 
 ## Project Description
-This project serves as a personal homepage, featuring an interactive navigation menu built using HTML, CSS, and JavaScript. The menu uses JavaScript to highlight the currently selected menu item. The site is designed to provide quick access to a collection of frequently used developer tools, resources and documentations.
+Welcome to my personal homepage! This interactive dashboard, built with Astro JS, serves as a central hub for developers. Navigate effortlessly through curated collections of AI tools, UI/UX resources, development utilities, and more. The sleek design and intuitive navigation make it easy to discover and access the resources you need to boost your productivity.
 
 ## Table of Contents
 
@@ -52,14 +52,17 @@ This homepage is organized into sections accessible through the navigation menu.
     <img src="https://github.com/user-attachments/assets/74ffbf4b-91fe-453d-b917-b97fa51c5241" alt="Screenshot 2025-01-06 at 22-41-22 Developer Resources" style="width: 30%; margin: 5px;">
 </div>
 
-### Prerequisites
+### Prerequisites (For Contributors)
 
+*   Node.js (version 18 or higher)
+*   pnpm (or npm/yarn)
 *   A web browser (e.g., Chrome, Firefox, Safari)
-*   Basic understanding of HTML, CSS, and JavaScript
 
-### Installation
+### Installation (For Contributors)
 
-1.  Clone the repository (if available):
+These instructions are for contributors who want to modify the project.
+
+1.  Clone the repository:
     ```bash
     git clone <your_repository_url>
     ```
@@ -67,16 +70,29 @@ This homepage is organized into sections accessible through the navigation menu.
     ```bash
     cd <your_project_directory>
     ```
-   **Note:** As this is a static website, no server-side installation is required.
+3.  Install dependencies:
+    ```bash
+    pnpm install
+    ```
 
-### Running the Application
+### Running the Application (For Contributors)
 
-1.  Open the `index.html` file in your web browser.
+1.  Start the development server:
+    ```bash
+    pnpm run dev
+    ```
+
+    This will start the Astro development server. Open your browser and navigate to the address shown in the console (usually `http://localhost:4321`).
+
+### Viewing the Deployed Application
+
+To view the deployed application, visit [https://abrarabe.github.io/myhomepage](https://abrarabe.github.io/myhomepage).
 
 ## Features
 
 *   **Interactive Navigation:** The navigation menu highlights the currently selected item when clicked.
 *   **Simple and Clean:** The design prioritizes simplicity and clear functionality.
+*   **Built with Astro JS:** Enjoy the benefits of modern web development with Astro JS, including improved performance, SEO optimization, and a component-based architecture.
 
 ## Usage
 
