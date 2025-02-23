@@ -1,14 +1,14 @@
 ---
-const { pageTitle, pageIcon } = Astro.props;
+const { title, siteIcon } = Astro.props;
 ---
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href={pageIcon} />
+    <link rel="icon" href={siteIcon} />
     <link
         rel="stylesheet"
         href="https://www.nerdfonts.com/assets/css/webfont.css"
     />
-    <title>{pageTitle}</title>
+    <title>{title}</title>
 </head>
