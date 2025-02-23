@@ -1,405 +1,153 @@
 ---
-import "../styles/global.css";
-import "../styles/pages.css";
+import PageLayout from "../layouts/PageLayout.astro";
 
-import LocalScripts from "../components/LocalScripts.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import Section from "../components/Section.astro";
+import PageTitle from "../components/PageTitle.astro";
+
+const title = "AI | My Dashboard";
+const siteIcon = "/myhomepage/images/ai.png";
+// Data for Chatbots
+const aiChatbots = [
+    {
+        title: "ChatGPT",
+        description:
+            "ChatGPT is a versatile generative AI chatbot, primarily used for content creation. It offers broad platform support, including web, mobile, and API integration, making it highly adaptable.",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg", // Corrected path
+        link: "https://chat.openai.com/",
+        altText: "ChatGPT",
+        imageWidth: "w-12",
+    },
+    {
+        title: "Gemini",
+        description:
+            "Gemini is a family of multimodal large language models developed by Google DeepMind, serving as the successor to LaMDA and PaLM 2.",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", // Corrected path
+        link: "https://gemini.google.com/",
+        altText: "Gemini AI",
+        imageWidth: "w-24",
+    },
+    {
+        title: "Deepseek",
+        description:
+            "DeepSeek is an advanced AI chatbot designed to unravel the mysteries of Artificial General Intelligence (AGI) with a focus on long-term goals.",
+        imageUrl: "/myhomepage/images//deepseek.svg",
+        link: "https://chat.deepseek.com/",
+        altText: "Deepseek AI",
+        imageWidth: "w-44",
+    },
+    {
+        title: "Claude",
+        description:
+            "Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg",
+        link: "https://claude.ai/",
+        altText: "Claude AI",
+    },
+    {
+        title: "Mistral",
+        description:
+            "Mistral Large Chat excels at educational and information retrieval tasks. Its cloud platform integration and multilingual support make it a versatile and widely accessible tool.",
+        imageUrl: "/myhomepage/images//mistral.svg",
+        link: "https://chat.mistral.ai/chat",
+        altText: "Mistral AI",
+        imageWidth: "w-12",
+    },
+    {
+        title: "Perplexity",
+        description:
+            "Perplexity AI is a multifaceted chatbot offering browser extensions and a mobile app, ensuring accessibility across various devices.",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg",
+        link: "https://www.perplexity.ai/",
+        altText: "Perplexity AI",
+        imageWidth: "w-36", // Specify width for this one
+    },
+    {
+        title: "BlackBox",
+        description:
+            "Blackbox AI is a sophisticated coding assistant to enhance developer productivity. It offers tools for code generation, real-time suggestions, and efficient problem-solving.",
+        imageUrl: "https://img.icons8.com/ios/500/blackbox.png",
+        link: "https://www.blackbox.ai/",
+        altText: "Microsoft AI",
+        imageWidth: "w-12", // Specify width for this one
+    },
+    {
+        title: "HuggingChat",
+        description:
+            "HuggingChat is an excellent resource for education and information retrieval. Its open-source nature allows for customization and easy integration into various systems.",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hf-logo-with-title.svg/1280px-Hf-logo-with-title.svg.png",
+        link: "https://huggingface.co/chat/",
+        altText: "HuggingChat",
+        imageWidth: "w-40",
+    },
+    {
+        title: "glhf.chat",
+        description:
+            "We use vLLM and a custom-built, autoscaling GPU scheduler to run (almost) any open-source large language model for you. You can use our chat UI, or our OpenAI-compatible API.",
+        imageUrl: "/myhomepage/images/glhfchat.svg",
+        link: "https://glhf.chat/",
+        altText: "glhf.chat",
+    },
+    {
+        title: "Microsoft Copilot",
+        description:
+            "Microsoft Copilot is a helpful personal assistant chatbot integrated with several Microsoft products, providing convenient access and functionality.",
+        imageUrl:
+            "https://upload.wikimedia.org/wikipedia/commons/5/5a/Microsoft_copilot_with_wordmark_logo.png",
+        link: "https://copilot.microsoft.com/",
+        altText: "Microsoft AI",
+        imageWidth: "w-34",
+    },
+];
+// Data for Other Tools
+const otherTools = [
+    {
+        title: "Presentations.ai",
+        description:
+            "Presentations.ai is an AI-powered platform designed for streamlined creation of professional presentations. It incorporates real-time collaboration features for efficient teamwork.",
+        imageUrl:
+            "https://cdn.prod.website-files.com/63ca9a05fdc83042565f605c/63e380b25750982953578ec7_P_AI_54.svg",
+        link: "https://app.presentations.ai/#/ideatodeck",
+        altText: "Presentations.ai",
+        imageWidth: "w-48",
+    },
+    {
+        title: "Teal",
+        description:
+            "Teal is an AI-powered resume builder that assists in refining and optimizing resumes to maximize their impact on potential employers. It leverages AI to enhance presentation and keywords.",
+        imageUrl:
+            "https://cdn.prod.website-files.com/62775a91cc3db44c787149de/62775d8abf9f57629c567a0a_Group%201148.svg",
+        link: "https://app.tealhq.com/home",
+        altText: "Teal",
+        imageWidth: "w-24",
+    },
+    {
+        title: "Sudowrite",
+        description:
+            "Sudowrite is a creative writing assistant, especially beneficial for fiction writers. It helps overcome writer's block and generates new ideas, enhancing the creative process.",
+        imageUrl:
+            "https://res.cloudinary.com/helpkit/image/upload/v1721662250/write_logo_dark_b7a5cc707e.png",
+        link: "https://editor.sudowrite.com/app",
+        altText: "Sudowrite",
+        imageWidth: "w-28",
+    },
+];
 ---
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>AI Dashboard</title>
-        <link rel="icon" href="/public/images/ai.png" />
-        <link
-            rel="stylesheet"
-            href="https://www.nerdfonts.com/assets/css/webfont.css"
-        />
-        <meta name="generator" content={Astro.generator} />
-    </head>
-
-    <body>
-        <section id="preloaderLink" class="preloader flex">
-            <article class="loader"></article>
-        </section>
-        <main id="content" class="hidden">
-            <div class="grid grid-flow-row auto-rows-max gap-2">
-                <div class="pt-10 mb-5">
-                    <ul>
-                        <li class="pl-1">
-                            <a href="/" class="preload-link">
-                                <i class="nf nf-fa-codepen" aria-hidden="true"
-                                ></i>
-                            </a>
-                        </li>
-                        <li class="active" class="preload-link">
-                            <a href="/ai" class="active-text block">
-                                <i class="nf nf-fa-coffee" aria-hidden="true"
-                                ></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/ui_ux" class="preload-link">
-                                <i class="nf nf-fa-rocket" aria-hidden="true"
-                                ></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/dev" class="preload-link">
-                                <i class="nf nf-dev-terminal" aria-hidden="true"
-                                ></i>
-                            </a>
-                        </li>
-                        <li class="pr-1">
-                            <a
-                                href="https://github.com/AbrarAbe/mydashboard"
-                                class="preload-link"
-                            >
-                                <i class="nf nf-dev-github" aria-hidden="true"
-                                ></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="container mx-auto mb-5 py-5 px-10">
-                    <div
-                        class="mb-5 tracking-wide"
-                        style="font-family: primous;"
-                    >
-                        <h1
-                            class="text-4xl lg:text-5xl md:text-md sm:text-sm text-center mb-10"
-                        >
-                            AI Dashboard
-                        </h1>
-
-                        <!-- Chatbots -->
-                        <h1 class="text-2xl lg:text-3xl md:text-md sm:text-sm">
-                            <i class="nf nf-md-robot_outline"> Chatbots</i>
-                        </h1>
-                    </div>
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 tracking-wide"
-                        style="font-family: cascadiacove;"
-                    >
-                        <a
-                            href="https://chat.openai.com/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg"
-                                alt="ChatGPT"
-                                class="mb-4 w-12"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    ChatGPT
-                                </h2>
-                                <p class="text-gray-600 break-normal">
-                                    ChatGPT is a versatile generative AI
-                                    chatbot, primarily used for content
-                                    creation. It offers broad platform support,
-                                    including web, mobile, and API integration,
-                                    making it highly adaptable.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://gemini.google.com/app"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"
-                                alt="Google AI"
-                                class="mb-4 w-24"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">Gemini</h2>
-                                <p class="text-gray-600 break-normal">
-                                    Gemini is a family of multimodal large
-                                    language models developed by Google
-                                    DeepMind, serving as the successor to LaMDA
-                                    and PaLM 2.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://chat.deepseek.com/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="../assets/images/deepseek.svg"
-                                alt="Deepseek AI"
-                                class="mb-4 w-28"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    Deepseek
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    DeepSeek is an advanced AI chatbot designed
-                                    to unravel the mysteries of Artificial
-                                    General Intelligence (AGI) with a focus on
-                                    long-term goals.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://claude.ai/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg"
-                                alt="Claude AI"
-                                class="mb-4 w-28"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">Claude</h2>
-                                <p class="text-gray-600 break-normal">
-                                    Claude is a next generation AI assistant
-                                    built by Anthropic and trained to be safe,
-                                    accurate, and secure to help you do your
-                                    best work.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://chat.mistral.ai/chat"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/en/1/1f/LowRes_80dpi_Mistral_AI_Logo.png"
-                                alt="Mistral AI"
-                                class="mb-4 w-28"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    Mistral
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Mistral Large Chat excels at educational and
-                                    information retrieval tasks. Its cloud
-                                    platform integration and multilingual
-                                    support make it a versatile and widely
-                                    accessible tool.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://www.perplexity.ai/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg"
-                                alt="Perplexity AI"
-                                class="mb-5 w-36"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    Perplexity
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Perplexity AI is a multifaceted chatbot
-                                    offering browser extensions and a mobile
-                                    app, ensuring accessibility across various
-                                    devices.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://www.blackbox.ai/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://img.icons8.com/ios/500/blackbox.png"
-                                alt="Microsoft AI"
-                                class="mb-1 w-12"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    BlackBox
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Blackbox AI is a sophisticated coding
-                                    assistant to enhance developer productivity.
-                                    It offers tools for code generation,
-                                    real-time suggestions, and efficient
-                                    problem-solving.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://huggingface.co/chat/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hf-logo-with-title.svg/1280px-Hf-logo-with-title.svg.png"
-                                alt="HuggingChat"
-                                class="mb-4 w-40"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    HuggingChat
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    HuggingChat is an excellent resource for
-                                    education and information retrieval. Its
-                                    open-source nature allows for customization
-                                    and easy integration into various systems.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://glhf.chat/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <h1
-                                class="text-2xl font-bold"
-                                style="font-family: jetbrainsmono"
-                            >
-                                glhf.chat
-                            </h1>
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    glhf.chat
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    We use vLLM and a custom-built, autoscaling
-                                    GPU scheduler to run (almost) any
-                                    open-source large language model for you.
-                                    You can use our chat UI, or our
-                                    OpenAI-compatible API.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://copilot.microsoft.com/"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Microsoft_copilot_with_wordmark_logo.png"
-                                alt="Microsoft AI"
-                                class="mb-4 w-28 h-max"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    Microsoft Copilot
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Microsoft Copilot is a helpful personal
-                                    assistant chatbot integrated with several
-                                    Microsoft products. It supports multiple
-                                    platforms, providing convenient access and
-                                    functionality.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <!-- Other Tools -->
-                    <h1
-                        class="text-2xl lg:text-3xl md:text-md sm:text-sm mt-10 mb-5 tracking-wide"
-                        style="font-family: primous"
-                    >
-                        <i class="nf nf-cod-tools"> Other Tools</i>
-                    </h1>
-                    <div
-                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 tracking-wide"
-                        style="font-family: cascadiacove;"
-                    >
-                        <a
-                            href="https://app.presentations.ai/#/ideatodeck"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://cdn.prod.website-files.com/63ca9a05fdc83042565f605c/63e380b25750982953578ec7_P_AI_54.svg"
-                                alt="Presentations.ai"
-                                class="mb-4 w-48"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    Presentations.ai
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Presentations.ai is an AI-powered platform
-                                    designed for streamlined creation of
-                                    professional presentations. It incorporates
-                                    real-time collaboration features for
-                                    efficient teamwork.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://app.tealhq.com/home"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://cdn.prod.website-files.com/62775a91cc3db44c787149de/62775d8abf9f57629c567a0a_Group%201148.svg"
-                                alt="Teal"
-                                class="mb-4 w-24"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">Teal</h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Teal is an AI-powered resume builder that
-                                    assists in refining and optimizing resumes
-                                    to maximize their impact on potential
-                                    employers. It leverages AI to enhance
-                                    presentation and keywords.
-                                </p>
-                            </div>
-                        </a>
-                        <a
-                            href="https://editor.sudowrite.com/app"
-                            class="bg-white/30 backdrop-blur-lg rounded-lg p-7 shadow-md hover:shadow-lg transform hover:scale-105 hover:bg-white/70 hover:border-white/0 transition duration-300 border-4 border-white xl:aspect-square flex flex-col justify-evenly"
-                        >
-                            <img
-                                src="https://res.cloudinary.com/helpkit/image/upload/v1721662250/write_logo_dark_b7a5cc707e.png"
-                                alt="Sudowrite"
-                                class="mb-4 w-28"
-                            />
-                            <div class="justify-center">
-                                <h2 class="text-xl font-medium mb-2">
-                                    Sudowrite
-                                </h2>
-                                <p
-                                    class="text-gray-600 break-normal text-pretty md:text-ellipsis"
-                                >
-                                    Sudowrite is a creative writing assistant,
-                                    especially beneficial for fiction writers.
-                                    It helps overcome writer's block and
-                                    generates new ideas, enhancing the creative
-                                    process.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="created-by pb-10">
-                <p>Created by</p>
-                <a href="https://github.com/AbrarAbe/" target="_blank"
-                    >Abrar Abe</a
-                >
-            </div>
-        </main>
-        <LocalScripts />
-    </body>
-</html>
+<PageLayout title={title} , siteIcon={siteIcon}>
+    <div class="container mx-auto px-5 py-5">
+        <!-- Page Title -->
+        <PageTitle text="AI Dashboard" />
+        <!-- Chatbots -->
+        <SectionTitle text=" Chatbots" iconClass="nf-md-robot_outline" />
+        <Section sites={aiChatbots} />
+        <!-- Other Tools -->
+        <SectionTitle text=" Other Tools" iconClass="nf-cod-tools" />
+        <Section sites={otherTools} />
+    </div>
+</PageLayout>
