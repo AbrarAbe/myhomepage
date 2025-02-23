@@ -4,15 +4,15 @@ body {
 
 @font-face {
     font-family: primous;
-    src: url(/fonts/primous.otf);
+    src: url(/myhomepage/fonts/primous.otf);
 }
 @font-face {
     font-family: cascadiacove;
-    src: url(/fonts/cascadiacove.otf);
+    src: url(/myhomepage/fonts/cascadiacove.otf);
 }
 @font-face {
     font-family: jetbrainsmono;
-    src: url(/fonts/jetbrainsmono.ttf);
+    src: url(/myhomepage/fonts/jetbrainsmono.ttf);
 }
 
 .hidden {
