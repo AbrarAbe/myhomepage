@@ -11,6 +11,17 @@ body {
     display: none;
 }
 
+#navigation-menu .active {
+  border-top: none;
+  border-bottom: 1px solid #252525;
+  box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.5);
+}
+
+#navigation-menu .active-text {
+  color: crimson;
+  text-shadow: 0 0 10px rgba(220, 10, 10, 0.5);
+}
+
 #navigation-menu ul {
   list-style: none;
   width: 100%;
@@ -26,51 +37,38 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2px; /* Increased margin for better spacing */
-  height: 80px; /* Adjusted height for better scaling */
-  width: 90px; /* Adjusted width for better scaling */
+  margin: 2px;
+  height: 80px;
+  width: 90px;
   background: #202020;
   border-top: 1px solid #353535;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5); /* Slightly reduced shadow */
-  transition: all 0.3s; /* Reduced transition for snappier feel */
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
   flex: 0 0 auto;
 }
 
-
 #navigation-menu ul li:nth-of-type(1) {
-  border-top-left-radius: 24px; /* Adjusted border radius */
-  border-bottom-left-radius: 24px; /* Adjusted border radius */
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
 }
 
 #navigation-menu ul li:last-of-type {
-  border-top-right-radius: 24px;  /* Adjusted border radius */
-  border-bottom-right-radius: 24px; /* Adjusted border radius */
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
 }
 
 #navigation-menu ul li a:hover {
   cursor: pointer;
   color: crimson;
-  text-shadow: 0 0 10px rgba(220, 10, 10, 0.5); /* Reduced text shadow */
+  text-shadow: 0 0 10px rgba(220, 10, 10, 0.5);
 }
 
 #navigation-menu ul li a {
   display: inline-block;
   color: gray;
   text-decoration: none;
-  font-size: 26px; /* Adjusted font size for better scaling */
-  transition: all 0.3s; /* Reduced transition for snappier feel */
-}
-
-#navigation-menu .active {
-  background: #151515;
-  border-top: none;
-  border-bottom: 1px solid #252525;
-  box-shadow: inset 0 0 8px 1px rgba(0, 0, 0, 0.8); /* Reduced shadow */
-}
-
-#navigation-menu .active-text {
-  color: crimson;
-  text-shadow: 0 0 10px rgba(220, 10, 10, 0.5);  /* Reduced text shadow */
+  font-size: 26px;
+  transition: all 0.3s;
 }
 
 /* Media query for tablets (max-width: 768px) */
