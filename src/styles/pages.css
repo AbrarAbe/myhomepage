@@ -3,20 +3,20 @@ body {
 }
 
 @font-face {
-    font-family: primous;
-    src: url(/myhomepage/fonts/primous.otf);
+  font-family: primous;
+  src: url(/myhomepage/fonts/primous.otf);
 }
 @font-face {
-    font-family: cascadiacove;
-    src: url(/myhomepage/fonts/cascadiacove.otf);
+  font-family: cascadiacove;
+  src: url(/myhomepage/fonts/cascadiacove.otf);
 }
 @font-face {
-    font-family: jetbrainsmono;
-    src: url(/myhomepage/fonts/jetbrainsmono.ttf);
+  font-family: jetbrainsmono;
+  src: url(/myhomepage/fonts/jetbrainsmono.ttf);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 ul {
@@ -34,8 +34,8 @@ ul li {
   margin: 1px;
   height: 55px;
   width: 55px;
-  background: #FFFFFF86;
-  border-top: 1px solid #FFFFFFFF;
+  background: #ffffff86;
+  border-top: 1px solid #ffffffff;
   box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
 }
@@ -80,13 +80,12 @@ ul li a {
   text-decoration: underline;
 }
 
-.active {
-  background: #FFFFFFFF;
-  border-top: none;
-  border-bottom: 2px solid #00000059;
+i.active {
+  color: crimson;
+  text-shadow: 0 0 15px rgba(244, 0, 0, 0.71);
 }
 
-.active-text {
-  color: crimson;
-  text-shadow: 0 0 15px rgba(220, 10, 10, 0.3);
+li.active-li {
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
