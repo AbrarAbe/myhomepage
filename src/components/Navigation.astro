@@ -1,37 +1,40 @@
 ---
-// Use new URL to resolve relative paths correctly
-const currentPath = new URL(Astro.url).pathname;
+const currentPath = Astro.url.pathname;
 const basePath = "/myhomepage/";
+
+function isActive(path: string) {
+  return currentPath === basePath + path;
+}
 ---
 
 <ul>
-    <li class:list={[{ active: currentPath === basePath }]}>
-        <a href={basePath} class="active-text block" aria-label="index">
-            <i class="nf nf-fa-codepen"></i>
-        </a>
-    </li>
-    <li class:list={[{ active: currentPath === basePath + "ai" }]}>
-        <a href={basePath + "ai"} class="preload-link" aria-label="ai">
-            <i class="nf nf-fa-coffee"></i>
-        </a>
-    </li>
-    <li class:list={[{ active: currentPath === basePath + "ui_ux" }]}>
-        <a href={basePath + "ui_ux"} class="preload-link" aria-label="uiux">
-            <i class="nf nf-fa-rocket"></i>
-        </a>
-    </li>
-    <li class:list={[{ active: currentPath === basePath + "dev" }]}>
-        <a href={basePath + "dev"} class="preload-link" aria-label="dev">
-            <i class="nf nf-dev-terminal"></i>
-        </a>
-    </li>
-    <li class="pr-1">
-        <a
-            href="https://github.com/AbrarAbe/mydashboard"
-            class="preload-link"
-            aria-label="source"
-        >
-            <i class="nf nf-dev-github"></i>
-        </a>
-    </li>
+  <li class:list={[{ active: isActive("") }]}>
+    <a href={basePath} class="active-text block" aria-label="index">
+      <i class="nf nf-fa-codepen"></i>
+    </a>
+  </li>
+  <li class:list={[{ active: isActive("ai") }]}>
+    <a href={basePath + "ai"} class="preload-link" aria-label="ai">
+      <i class="nf nf-fa-coffee"></i>
+    </a>
+  </li>
+  <li class:list={[{ active: isActive("ui_ux") }]}>
+    <a href={basePath + "ui_ux"} class="preload-link" aria-label="uiux">
+      <i class="nf nf-fa-rocket"></i>
+    </a>
+  </li>
+  <li class:list={[{ active: isActive("dev") }]}>
+    <a href={basePath + "dev"} class="preload-link" aria-label="dev">
+      <i class="nf nf-dev-terminal"></i>
+    </a>
+  </li>
+  <li class="pr-1">
+    <a
+      href="https://github.com/AbrarAbe/mydashboard"
+      class="preload-link"
+      aria-label="source"
+    >
+      <i class="nf nf-dev-github"></i>
+    </a>
+  </li>
 </ul>
