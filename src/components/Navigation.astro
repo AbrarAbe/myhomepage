@@ -44,14 +44,25 @@ const basePath = "/myhomepage/";
       "dev-link": basePath + "dev",
     };
 
+    function normalizePath(path) {
+      if (path.endsWith("/") && path.length > 1) {
+        return path.slice(0, -1);
+      }
+      return path;
+    }
+
+    const normalizedCurrentPath = normalizePath(currentPath);
+
     for (const [id, path] of Object.entries(links)) {
       const element = document.getElementById(id);
       const icon = element.querySelector("i");
+      const normalizedPath = normalizePath(path);
 
-      if (
-        currentPath === path ||
-        (currentPath === basePath.slice(0, -1) && path === basePath)
-      ) {
+      console.log(
+        `Checking link: ${id}, currentPath: ${normalizedCurrentPath}, path: ${normalizedPath}`
+      ); // Debugging
+
+      if (normalizedCurrentPath === normalizedPath) {
         icon.classList.add("active");
         element.classList.add("active-li");
       } else {

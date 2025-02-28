@@ -3,23 +3,17 @@ body {
 }
 
 @font-face {
-        font-family: reliva;
-        src: url(/myhomepage/fonts/reliva.otf);
+  font-family: reliva;
+  src: url(/myhomepage/fonts/reliva.otf);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-#navigation-menu .active {
-  border-top: none;
-  border-bottom: 1px solid #252525;
-  box-shadow: 0 8px 12px 0 rgba(255, 255, 255, 0.5);
-}
-
-#navigation-menu .active-text {
+i.active {
   color: crimson;
-  text-shadow: 0 0 10px rgba(220, 10, 10, 0.5);
+  text-shadow: 0 0 15px rgba(244, 0, 0, 0.71);
 }
 
 #navigation-menu ul {
@@ -73,17 +67,17 @@ body {
 
 /* Media query for tablets (max-width: 768px) */
 @media (max-width: 768px) {
-    #navigation-menu ul li {
+  #navigation-menu ul li {
     margin: 1px;
     height: 70px;
     width: 80px;
-     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5);
   }
   #navigation-menu ul li:nth-of-type(1) {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-    #navigation-menu ul li:last-of-type {
+  #navigation-menu ul li:last-of-type {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -92,20 +86,19 @@ body {
   }
 }
 
-
 /* Media query for mobile devices (max-width: 480px) */
 @media (max-width: 480px) {
-    #navigation-menu ul li {
+  #navigation-menu ul li {
     margin: 2px;
     height: 50px;
     width: 60px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   }
   #navigation-menu ul li:nth-of-type(1) {
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
   }
-    #navigation-menu ul li:last-of-type {
+  #navigation-menu ul li:last-of-type {
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
   }
@@ -144,7 +137,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  z-index: -10
+  z-index: -10;
 }
 
 .key {
@@ -306,12 +299,12 @@ body {
 }
 
 .key:nth-child(9) {
-    animation: pressDown9 2.8s infinite;
+  animation: pressDown9 2.8s infinite;
 }
 
 .key:nth-child(10) {
-    animation: pressDown10 3.8s infinite;
+  animation: pressDown10 3.8s infinite;
 }
 .key:nth-child(11) {
-    animation: pressDown11 3s infinite;
+  animation: pressDown11 3s infinite;
 }
