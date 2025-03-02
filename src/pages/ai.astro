@@ -9,145 +9,154 @@ const title = "AI | My Dashboard";
 const siteIcon = "/myhomepage/images/ai.png";
 // Data for Chatbots
 const aiChatbots = [
-    {
-        title: "ChatGPT",
-        description:
-            "ChatGPT is a versatile generative AI chatbot, primarily used for content creation. It offers broad platform support, including web, mobile, and API integration, making it highly adaptable.",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg", // Corrected path
-        link: "https://chat.openai.com/",
-        altText: "ChatGPT",
-        imageWidth: "w-12",
-    },
-    {
-        title: "Gemini",
-        description:
-            "Gemini is a family of multimodal large language models developed by Google DeepMind, serving as the successor to LaMDA and PaLM 2.",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", // Corrected path
-        link: "https://gemini.google.com/",
-        altText: "Gemini AI",
-        imageWidth: "w-24",
-    },
-    {
-        title: "Deepseek",
-        description:
-            "DeepSeek is an advanced AI chatbot designed to unravel the mysteries of Artificial General Intelligence (AGI) with a focus on long-term goals.",
-        imageUrl: "/myhomepage/images//deepseek.svg",
-        link: "https://chat.deepseek.com/",
-        altText: "Deepseek AI",
-        imageWidth: "w-44",
-    },
-    {
-        title: "Claude",
-        description:
-            "Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg",
-        link: "https://claude.ai/",
-        altText: "Claude AI",
-    },
-    {
-        title: "Mistral",
-        description:
-            "Mistral Large Chat excels at educational and information retrieval tasks. Its cloud platform integration and multilingual support make it a versatile and widely accessible tool.",
-        imageUrl: "/myhomepage/images//mistral.svg",
-        link: "https://chat.mistral.ai/chat",
-        altText: "Mistral AI",
-        imageWidth: "w-12",
-    },
-    {
-        title: "Perplexity",
-        description:
-            "Perplexity AI is a multifaceted chatbot offering browser extensions and a mobile app, ensuring accessibility across various devices.",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg",
-        link: "https://www.perplexity.ai/",
-        altText: "Perplexity AI",
-        imageWidth: "w-36", // Specify width for this one
-    },
-    {
-        title: "BlackBox",
-        description:
-            "Blackbox AI is a sophisticated coding assistant to enhance developer productivity. It offers tools for code generation, real-time suggestions, and efficient problem-solving.",
-        imageUrl: "https://img.icons8.com/ios/500/blackbox.png",
-        link: "https://www.blackbox.ai/",
-        altText: "Microsoft AI",
-        imageWidth: "w-12", // Specify width for this one
-    },
-    {
-        title: "HuggingChat",
-        description:
-            "HuggingChat is an excellent resource for education and information retrieval. Its open-source nature allows for customization and easy integration into various systems.",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hf-logo-with-title.svg/1280px-Hf-logo-with-title.svg.png",
-        link: "https://huggingface.co/chat/",
-        altText: "HuggingChat",
-        imageWidth: "w-40",
-    },
-    {
-        title: "glhf.chat",
-        description:
-            "We use vLLM and a custom-built, autoscaling GPU scheduler to run (almost) any open-source large language model for you. You can use our chat UI, or our OpenAI-compatible API.",
-        imageUrl: "/myhomepage/images/glhfchat.svg",
-        link: "https://glhf.chat/",
-        altText: "glhf.chat",
-    },
-    {
-        title: "Microsoft Copilot",
-        description:
-            "Microsoft Copilot is a helpful personal assistant chatbot integrated with several Microsoft products, providing convenient access and functionality.",
-        imageUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/5/5a/Microsoft_copilot_with_wordmark_logo.png",
-        link: "https://copilot.microsoft.com/",
-        altText: "Microsoft AI",
-        imageWidth: "w-34",
-    },
+  {
+    title: "ChatGPT",
+    description:
+      "ChatGPT is a versatile generative AI chatbot, primarily used for content creation. It offers broad platform support, including web, mobile, and API integration, making it highly adaptable.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg", // Corrected path
+    link: "https://chat.openai.com/",
+    altText: "ChatGPT",
+    imageWidth: "w-12",
+  },
+  {
+    title: "Gemini",
+    description:
+      "Gemini is a family of multimodal large language models developed by Google DeepMind, serving as the successor to LaMDA and PaLM 2.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg", // Corrected path
+    link: "https://gemini.google.com/",
+    altText: "Gemini AI",
+    imageWidth: "w-24",
+  },
+  {
+    title: "Deepseek",
+    description:
+      "DeepSeek is an advanced AI chatbot designed to unravel the mysteries of Artificial General Intelligence (AGI) with a focus on long-term goals.",
+    imageUrl: "/myhomepage/images//deepseek.svg",
+    link: "https://chat.deepseek.com/",
+    altText: "Deepseek AI",
+    imageWidth: "w-44",
+  },
+  {
+    title: "Claude",
+    description:
+      "Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/8/8a/Claude_AI_logo.svg",
+    link: "https://claude.ai/",
+    altText: "Claude AI",
+  },
+  {
+    title: "Mistral",
+    description:
+      "Mistral Large Chat excels at educational and information retrieval tasks. Its cloud platform integration and multilingual support make it a versatile and widely accessible tool.",
+    imageUrl: "/myhomepage/images//mistral.svg",
+    link: "https://chat.mistral.ai/chat",
+    altText: "Mistral AI",
+    imageWidth: "w-12",
+  },
+  {
+    title: "Perplexity",
+    description:
+      "Perplexity AI is a multifaceted chatbot offering browser extensions and a mobile app, ensuring accessibility across various devices.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/1/1d/Perplexity_AI_logo.svg",
+    link: "https://www.perplexity.ai/",
+    altText: "Perplexity AI",
+    imageWidth: "w-36", // Specify width for this one
+  },
+  {
+    title: "BlackBox",
+    description:
+      "Blackbox AI is a sophisticated coding assistant to enhance developer productivity. It offers tools for code generation, real-time suggestions, and efficient problem-solving.",
+    imageUrl: "https://img.icons8.com/ios/500/blackbox.png",
+    link: "https://www.blackbox.ai/",
+    altText: "Microsoft AI",
+    imageWidth: "w-12", // Specify width for this one
+  },
+  {
+    title: "HuggingChat",
+    description:
+      "HuggingChat is an excellent resource for education and information retrieval. Its open-source nature allows for customization and easy integration into various systems.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Hf-logo-with-title.svg/1280px-Hf-logo-with-title.svg.png",
+    link: "https://huggingface.co/chat/",
+    altText: "HuggingChat",
+    imageWidth: "w-40",
+  },
+  {
+    title: "glhf.chat",
+    description:
+      "We use vLLM and a custom-built, autoscaling GPU scheduler to run (almost) any open-source large language model for you. You can use our chat UI, or our OpenAI-compatible API.",
+    imageUrl: "/myhomepage/images/glhfchat.svg",
+    link: "https://glhf.chat/",
+    altText: "glhf.chat",
+  },
+  {
+    title: "Microsoft Copilot",
+    description:
+      "Microsoft Copilot is a helpful personal assistant chatbot integrated with several Microsoft products, providing convenient access and functionality.",
+    imageUrl:
+      "https://upload.wikimedia.org/wikipedia/commons/5/5a/Microsoft_copilot_with_wordmark_logo.png",
+    link: "https://copilot.microsoft.com/",
+    altText: "Microsoft AI",
+    imageWidth: "w-34",
+  },
 ];
 // Data for Other Tools
 const otherTools = [
-    {
-        title: "Presentations.ai",
-        description:
-            "Presentations.ai is an AI-powered platform designed for streamlined creation of professional presentations. It incorporates real-time collaboration features for efficient teamwork.",
-        imageUrl:
-            "https://cdn.prod.website-files.com/63ca9a05fdc83042565f605c/63e380b25750982953578ec7_P_AI_54.svg",
-        link: "https://app.presentations.ai/#/ideatodeck",
-        altText: "Presentations.ai",
-        imageWidth: "w-48",
-    },
-    {
-        title: "Teal",
-        description:
-            "Teal is an AI-powered resume builder that assists in refining and optimizing resumes to maximize their impact on potential employers. It leverages AI to enhance presentation and keywords.",
-        imageUrl:
-            "https://cdn.prod.website-files.com/62775a91cc3db44c787149de/62775d8abf9f57629c567a0a_Group%201148.svg",
-        link: "https://app.tealhq.com/home",
-        altText: "Teal",
-        imageWidth: "w-24",
-    },
-    {
-        title: "Sudowrite",
-        description:
-            "Sudowrite is a creative writing assistant, especially beneficial for fiction writers. It helps overcome writer's block and generates new ideas, enhancing the creative process.",
-        imageUrl:
-            "https://res.cloudinary.com/helpkit/image/upload/v1721662250/write_logo_dark_b7a5cc707e.png",
-        link: "https://editor.sudowrite.com/app",
-        altText: "Sudowrite",
-        imageWidth: "w-28",
-    },
+  {
+    title: "Presentations.ai",
+    description:
+      "Presentations.ai is an AI-powered platform designed for streamlined creation of professional presentations. It incorporates real-time collaboration features for efficient teamwork.",
+    imageUrl:
+      "https://cdn.prod.website-files.com/63ca9a05fdc83042565f605c/63e380b25750982953578ec7_P_AI_54.svg",
+    link: "https://app.presentations.ai/#/ideatodeck",
+    altText: "Presentations.ai",
+    imageWidth: "w-48",
+  },
+  {
+    title: "Gamma",
+    description:
+      " Gamma is an AI presentation maker that can generate presentations, documents, and webpages.",
+    imageUrl: "/myhomepage/images/gamma.svg",
+    link: "https://gamma.app/",
+    altText: "Gamma",
+    imageWidth: "w-32",
+  },
+  {
+    title: "Teal",
+    description:
+      "Teal is an AI-powered resume builder that assists in refining and optimizing resumes to maximize their impact on potential employers. It leverages AI to enhance presentation and keywords.",
+    imageUrl:
+      "https://cdn.prod.website-files.com/62775a91cc3db44c787149de/62775d8abf9f57629c567a0a_Group%201148.svg",
+    link: "https://app.tealhq.com/home",
+    altText: "Teal",
+    imageWidth: "w-24",
+  },
+  {
+    title: "Sudowrite",
+    description:
+      "Sudowrite is a creative writing assistant, especially beneficial for fiction writers. It helps overcome writer's block and generates new ideas, enhancing the creative process.",
+    imageUrl:
+      "https://res.cloudinary.com/helpkit/image/upload/v1721662250/write_logo_dark_b7a5cc707e.png",
+    link: "https://editor.sudowrite.com/app",
+    altText: "Sudowrite",
+    imageWidth: "w-28",
+  },
 ];
 ---
 
 <PageLayout title={title} , siteIcon={siteIcon}>
-    <div class="container mx-auto px-5 py-5">
-        <!-- Page Title -->
-        <PageTitle text="AI Dashboard" />
-        <!-- Chatbots -->
-        <SectionTitle text=" Chatbots" iconClass="nf-md-robot_outline" />
-        <Section sites={aiChatbots} />
-        <!-- Other Tools -->
-        <SectionTitle text=" Other Tools" iconClass="nf-cod-tools" />
-        <Section sites={otherTools} />
-    </div>
+  <div class="container mx-auto px-5 py-5">
+    <!-- Page Title -->
+    <PageTitle text="AI Dashboard" />
+    <!-- Chatbots -->
+    <SectionTitle text=" Chatbots" iconClass="nf-md-robot_outline" />
+    <Section sites={aiChatbots} />
+    <!-- Other Tools -->
+    <SectionTitle text=" Other Tools" iconClass="nf-cod-tools" />
+    <Section sites={otherTools} />
+  </div>
 </PageLayout>
