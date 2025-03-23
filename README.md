@@ -1,4 +1,6 @@
-# My Homepage
+[![Deploy to GitHub Pages](https://github.com/AbrarAbe/myhomepage/actions/workflows/astro.yml/badge.svg)](https://github.com/AbrarAbe/myhomepage/actions/workflows/astro.yml)
+
+# My Homepage 🚀
 A personal homepage with an interactive navigation menu, All in one homepage for AI, UI/UX, Documentations, and other usefull tools for developers 💻
 
 ![Screenshot 2025-01-06 at 22-40-27 My Homepage](https://github.com/user-attachments/assets/5f222f10-454f-4dc6-9504-014a92291469)
@@ -11,12 +13,11 @@ Welcome to my personal homepage! This interactive dashboard, built with Astro JS
 - [Project Description](#project-description)
 - [Table of Contents](#table-of-contents)
 - [Content Sections](#content-sections)
-- [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
 - [Features](#features)
-- [Contributing](#contributing)
+- [Repo Stats](#repo-stats)
 - [License](#license)
 - [Contact](#contact)
 
@@ -51,13 +52,22 @@ This homepage is organized into sections accessible through the navigation menu.
     <img src="https://github.com/user-attachments/assets/74ffbf4b-91fe-453d-b917-b97fa51c5241" alt="Screenshot 2025-01-06 at 22-41-22 Developer Resources" style="width: 30%; margin: 5px;">
 </div>
 
-### Prerequisites (For Contributors)
+## Contributing
+
+While this project is simple, contributions are welcome! To contribute:
+
+1.  Fork the repository.
+2.  Create a new branch for your feature or bug fix.
+3.  Make your changes.
+4.  Submit a pull request.
+
+#### Prerequisites
 
 *   Node.js (version 18 or higher)
 *   pnpm (or npm/yarn)
 *   A web browser (e.g., Chrome, Firefox, Safari)
 
-### Installation (For Contributors)
+#### Installation
 
 These instructions are for contributors who want to modify the project.
 
@@ -74,7 +84,7 @@ These instructions are for contributors who want to modify the project.
     pnpm install
     ```
 
-### Running the Application (For Contributors)
+#### Running the Application
 
 1.  Start the development server:
     ```bash
@@ -83,7 +93,7 @@ These instructions are for contributors who want to modify the project.
 
     This will start the Astro development server. Open your browser and navigate to the address shown in the console (usually `http://localhost:4321`).
 
-### Viewing the Deployed Application
+#### Viewing the Deployed Application
 
 To view the deployed application, visit [https://abrarabe.github.io/myhomepage](https://abrarabe.github.io/myhomepage).
 
@@ -93,16 +103,7 @@ To view the deployed application, visit [https://abrarabe.github.io/myhomepage](
 *   **Simple and Clean:** The design prioritizes simplicity and clear functionality.
 *   **Built with Astro JS:** Enjoy the benefits of modern web development with Astro JS, including improved performance, SEO optimization, and a component-based architecture.
 
-## Contributing
-
-While this project is simple, contributions are welcome! To contribute:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Make your changes.
-4.  Submit a pull request.
-
-## Github Stats
+## Repo Stats
 ![Alt](https://repobeats.axiom.co/api/embed/ae961c38fae569e289672bbdb2ac9a4e6d43ff30.svg "Repobeats analytics image")
 
 ## License
