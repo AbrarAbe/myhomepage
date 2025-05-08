@@ -6,7 +6,7 @@ A personal homepage with an interactive navigation menu, All in one homepage for
 ![Screenshot 2025-01-06 at 22-40-27 My Homepage](https://github.com/user-attachments/assets/5f222f10-454f-4dc6-9504-014a92291469)
 
 ## Project Description
-Welcome to my personal homepage! This interactive dashboard, built with Astro JS, serves as a central hub for developers. Navigate effortlessly through curated collections of AI tools, UI/UX resources, development utilities, and more. The sleek design and intuitive navigation make it easy to discover and access the resources you need to boost your productivity.
+Welcome to my homepage! This interactive dashboard, built with Astro JS, serves as a central hub for developers. Navigate effortlessly through curated collections of AI tools, UI/UX resources, development utilities, and more. The sleek design and intuitive navigation make it easy to discover and access the resources you need to boost your productivity.
 
 ## Table of Contents
 
