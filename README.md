@@ -73,11 +73,11 @@ These instructions are for contributors who want to modify the project.
 
 1.  Clone the repository:
     ```bash
-    git clone <your_repository_url>
+    git clone https://github.com/AbrarAbe/myhomepage.git
     ```
 2.  Navigate to the project directory:
     ```bash
-    cd <your_project_directory>
+    cd myhomepage
     ```
 3.  Install dependencies:
     ```bash

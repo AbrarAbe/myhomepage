@@ -165,6 +165,20 @@ const otherTools = [
     imageWidth: "w-28",
   },
 ];
+
+// Data for AI Website Builders
+const aiWebsiteBuilders = [
+  {
+    title: "v0 by Vercel",
+    description:
+      "V0 is a next-generation design tool powered by AI. It lets you generate and customize production-quality React code for your UI.",
+    imageUrl:
+      "/myhomepage/images/v0.svg",
+    link: "https://v0.dev/",
+    altText: "v0.dev",
+    imageWidth: "w-16",
+  },
+];
 ---
 
 <PageLayout title={title} , siteIcon={siteIcon}>
@@ -174,6 +188,9 @@ const otherTools = [
     <!-- Chatbots -->
     <SectionTitle text=" Chatbots" iconClass="nf-md-robot_outline" />
     <Section sites={aiChatbots} />
+    {/* AI Website Builders */}
+    <SectionTitle text=" AI Website Builders" iconClass="nf-oct-code_square" />
+    <Section sites={aiWebsiteBuilders} />
     <!-- Other Tools -->
     <SectionTitle text=" Other Tools" iconClass="nf-cod-tools" />
     <Section sites={otherTools} />
